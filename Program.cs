@@ -1,26 +1,21 @@
 ﻿using System;
+//Using the below, this is how I can reference the methods in math
+using csharp_projects.Math;
 
-namespace Operators
+namespace Classes
 {
-    public class Program
+    class Program
     {
         public static void Main(string[] args)
         {
-            //Arithmetic Operators 
-            var a = 1;
-            var b = 2;
-            var c = 3;
-            /* Console.WriteLine(a + b); = 13
-            Console.WriteLine(a / b); = 3. We get a whole number because we have not specified we want to get a float. See below.
-            Console.WriteLine((float)a / (float)b); = 3.3333
-            Console.WriteLine((a + b) * c); = 9
-            Console.WriteLine(a > b); = False
-            Console.WriteLine(a == b); = False
-            Console.WriteLine(a != b); = True
-            Console.WriteLine(c > b && c > a); = True
-            Console.WriteLine(c > b && c == a); = False
-            Console.WriteLine(c > b || c == a); = True
-            Console.WriteLine(!(c > b || c == a)); = False */
+            var john = new Person();
+            john.FirstName = "John";
+            john.LastName = "Smith";
+            john.Introduce();
+
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
         }
     }
 }
