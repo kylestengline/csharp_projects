@@ -1,39 +1,33 @@
 ﻿using System;
 
-namespace Variables
+namespace TypeConversion
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            //byte number = 2;
-            //int count = 10;
-            //float totalPrice = 20.95f;
-            //char character = 'A';
-            //string firstName = "Kyle";
-            //bool isWorking = false; 
+        //Explicit type conversion
+
+            //int i = 1000;
+            //must explicitly state casting if there's a chance for data loss.
+            //byte b = (byte) i;
+            //Console.WriteLine(b);
             
-            // we can use var when we want to generalize our datatypes, but be more specific when we want to use bytes, int, etc..
-            //var number = 2;
-            //var count = 10;
-            //var totalPrice = 20.95f;
-            //var character = 'A';
-            //var firstName = "Kyle";
-            //var isWorking = false; 
-            
-            //Console.WriteLine(number);
-            //Console.WriteLine(count);
-            //Console.WriteLine(totalPrice);
-            //Console.WriteLine(character);
-            //Console.WriteLine(firstName);
-            //Console.WriteLine(isWorking);
-            
-            //Finding the range we can store
-            //Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
-            //Console.WriteLine("{0} {1}", float.MinValue, float.MaxValue);
-            
-            //Constants
-            const float Pi = 3.14f;
+            //Non-Compatible Types
+            try
+            {
+                //var number = "1234";
+                //byte b = Convert.ToByte(number);
+               // Console.WriteLine(b);
+                
+                string str = "true";
+                bool b = Convert.ToBoolean(str);
+                Console.WriteLine(b);
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("The number could not be converted to a byte");
+            }
         }
     }
 }
