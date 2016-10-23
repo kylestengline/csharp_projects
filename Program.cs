@@ -1,32 +1,49 @@
 ﻿using System;
 
-namespace Enums
+namespace Types
 {
-//Because enum is a new type we need to define it at the namespace level.
-    public enum ShippingMethod
-    //always set values as it is convention. 
+    public class Person
     {
-        RegularAirMail = 1,
-        RegisteredAirMail = 2,
-        Express = 3
+        public int Age;
     }
     class Program
     {
         public static void Main(string[] args)
         {
-            var method = ShippingMethod.Express;
-            Console.WriteLine((int)method); //prints 3
+            var number = 1;
+            Increment(number);
+            System.Console.WriteLine(number);
             
-            var methodId = 3;
-            System.Console.WriteLine((ShippingMethod)methodId); //prints Express
-            
-            System.Console.WriteLine(method.ToString()); //prints Express
-            
-            //This is how you convert or parse a string to a enum.
-            var methodName = "Express";
-            /* first setting var then casting because parse returns an object and we need an enum. This is why we need to cast */
-            var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
-            System.Console.WriteLine(shippingMethod);
+            var person = new Person() {Age = 20};
+            MakeOld(person);
+            System.Console.WriteLine(person.Age);
+        }
+        public static void Increment(int number)
+        {
+            number += 10;
+        }
+        public static void MakeOld(Person person)
+        {
+            person.Age += 10;
         }
     }
 }
+
+        /*
+        public static void Main(string[] args)
+        {
+            Reference types Example 1:
+            var a = 10;
+            var b = a;
+            b++;
+            System.Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+            //prints a: 10, b: 11
+            /* when you copy a value type to a diff var, a copy of that value is taken and stored in that var. That's why we call them value types. 
+            
+            var array1 = new int[3] {1, 2, 3};
+            var array2 = array1;
+            array2[0] = 0;
+            System.Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+            //prints array1[0]: 0, array2[0]: 0 
+        }
+            */
