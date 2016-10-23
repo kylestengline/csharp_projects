@@ -13,10 +13,15 @@ namespace Types
             var number = 1;
             Increment(number);
             System.Console.WriteLine(number);
+            //number = 1
             
+            //making a new person aged 20.
             var person = new Person() {Age = 20};
+            //add 10 to persons age
             MakeOld(person);
+            //display age of person.
             System.Console.WriteLine(person.Age);
+            //prints 30.
         }
         public static void Increment(int number)
         {
