@@ -6,7 +6,8 @@ namespace ConditionalExercise
   {
     public static void Main(string[] args)
     {
-      System.Console.Write("Please enter a number between 1 and 10: ");
+      // Display valid or invalid number depending on number input
+      System.Console.Write("\nPlease enter a number between 1 and 10: ");
       String a = Console.ReadLine();
       int b = Convert.ToInt32(a);
       
@@ -19,10 +20,26 @@ namespace ConditionalExercise
         Console.WriteLine("Valid Number");
       }
 
-      /*double a, b;
-      Console.WriteLine("Please Choose Two Numbers...: ");*/
+       //Display max between two numbers
+      Console.Write("\nPick A number: ");
+      var first = Convert.ToInt32(Console.ReadLine());
       
+      Console.Write("\nPick Another number: ");
+      var second = Convert.ToInt32(Console.ReadLine());
+
+      var max = (first > second) ? first : second;
+      Console.WriteLine("Max: " + max);
       
+      Console.Write("\nHeight of Image: ");
+      var height = Convert.ToInt32(Console.ReadLine());
+
+      Console.WriteLine("\nWidth of Image: ");
+      var width = Convert.ToInt32(Console.ReadLine());
+
+      if (width > height)
+        Console.WriteLine("Landscape");
+      else 
+        Console.WriteLine("Portait");
     }
   }
 }
