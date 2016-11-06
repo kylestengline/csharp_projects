@@ -6,9 +6,8 @@ namespace ConditionalExercise
   {
     public static void Main(string[] args)
     {
-      String a;
-      Console.WriteLine("Please enter a number between 1 and 10...");
-      a = Console.ReadLine();
+      System.Console.Write("Please enter a number between 1 and 10: ");
+      String a = Console.ReadLine();
       int b = Convert.ToInt32(a);
       
       if (b > 10 && b < 1)
@@ -19,6 +18,11 @@ namespace ConditionalExercise
       {
         Console.WriteLine("Valid Number");
       }
+
+      /*double a, b;
+      Console.WriteLine("Please Choose Two Numbers...: ");*/
+      
+      
     }
   }
 }
