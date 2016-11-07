@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ForLoops
+namespace Foreach
 {
   public class Program
   {
