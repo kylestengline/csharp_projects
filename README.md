@@ -13,3 +13,6 @@
 ### Control Flow
 - [Conditionals](https://github.com/kylestengline/csharp_projects/tree/conditionals)
 - [Conditional Exercises](https://github.com/kylestengline/csharp_projects/tree/conditional_exercise)
+- [For Loops](https://github.com/kylestengline/csharp_projects/tree/for_loops)
+- [ForEach](https://github.com/kylestengline/csharp_projects/tree/foreach)
+- [While Loops](https://github.com/kylestengline/csharp_projects/tree/while_loop)
