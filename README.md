@@ -16,3 +16,4 @@
 - [For Loops](https://github.com/kylestengline/csharp_projects/tree/for_loops)
 - [ForEach](https://github.com/kylestengline/csharp_projects/tree/foreach)
 - [While Loops](https://github.com/kylestengline/csharp_projects/tree/while_loop)
+- [Random Class](https://github.com/kylestengline/csharp_projects/tree/random_class)
