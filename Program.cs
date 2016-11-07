@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WhileLoops
+namespace RandomClass
 {
   public class Program
   {
