@@ -6,42 +6,23 @@ namespace WhileLoops
   {
     public static void Main(string[] args)
     {
-      /*typically it's better to use a while loop when you don't know ahead of time, how many times you're going to do an iteration
-      var i = 0;
-      while (i <= 10)
-      {
-        if (i % 2 == 0)
-          System.Console.WriteLine(i);
-          i++;
-      }*/
+      //generating a list of up to 10 random numbers
+      var random = new Random();
 
+      //password can only be 10 char long
+      const int passwordLength = 10;
       
-      /*while (true)
-      {
-        System.Console.Write("Type your name: ");
-        var input = Console.ReadLine();
-
-        //program ends if enter key is pressed
-        if (String.IsNullOrWhiteSpace(input))
-          break;
-
-        System.Console.WriteLine("@Echo: " + input);
-      }*/
-      
-      while (true)
-      {
-        System.Console.Write("Type your name: ");
-        var input = Console.ReadLine();
-
-        //program ends if enter key is pressed
-        if (!String.IsNullOrWhiteSpace(input))
-        {
-          System.Console.WriteLine("@Echo: " + input);
-          //with continue, the loop will jump back to the beginning after you type your name.
-          continue;
-        }
-          break;
-      }
+      //looping over the length of the password and making it a char instead of an int.
+      var buffer = new char[passwordLength];
+      for (var i = 0; i < passwordLength; i++)
+      //generating random chars for our password
+        buffer[i] = (char)('a' + random.Next(0, 26));
+        
+        //intitializing password as a new string 
+        var password = new string(buffer);
+        System.Console.WriteLine(password);
+        //System.Console.WriteLine(random.Next(1, 10));
+        //System.Console.WriteLine((char)('a' + random.Next(0, 26));
     }
   }
 }
