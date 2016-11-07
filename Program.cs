@@ -1,31 +1,46 @@
 ﻿using System;
 
-namespace ForLoops
+namespace WhileLoops
 {
   public class Program
   {
     public static void Main(string[] args)
     {
-      var name = "John Smith";
-      /*for (var i = 0; i < name.Length; i++)
+      /*typically it's better to use a while loop when you don't know ahead of time, how many times you're going to do an iteration
+      var i = 0;
+      while (i <= 10)
       {
-        System.Console.WriteLine(name[i]);
+        if (i % 2 == 0)
+          System.Console.WriteLine(i);
+          i++;
+      }*/
+
+      
+      /*while (true)
+      {
+        System.Console.Write("Type your name: ");
+        var input = Console.ReadLine();
+
+        //program ends if enter key is pressed
+        if (String.IsNullOrWhiteSpace(input))
+          break;
+
+        System.Console.WriteLine("@Echo: " + input);
       }*/
       
-      //here we don't have to set a variable and compare it to something.Length and we also don't have to increment.
-      //so whenever we have a enumerable object, it's much easier to iterate over using a foreach.
-      /*foreach (var character in name)
+      while (true)
       {
-        System.Console.WriteLine(character);
-      }*/
+        System.Console.Write("Type your name: ");
+        var input = Console.ReadLine();
 
-      //intializing a new array with object initialization syntax
-      //we have to instantiate arrays with the new operators
-      var numbers = new int[] {1, 2, 3, 4};
-
-      foreach (var number in numbers)
-      {
-        System.Console.WriteLine(number);
+        //program ends if enter key is pressed
+        if (!String.IsNullOrWhiteSpace(input))
+        {
+          System.Console.WriteLine("@Echo: " + input);
+          //with continue, the loop will jump back to the beginning after you type your name.
+          continue;
+        }
+          break;
       }
     }
   }
