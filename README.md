@@ -12,3 +12,4 @@
 
 ### Control Flow
 - [Conditionals](https://github.com/kylestengline/csharp_projects/tree/conditionals)
+- [Conditional Exercises](https://github.com/kylestengline/csharp_projects/tree/conditional_exercise)
