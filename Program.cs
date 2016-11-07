@@ -6,19 +6,26 @@ namespace ForLoops
   {
     public static void Main(string[] args)
     {
-      for (var i = 1; i <= 10; i++)
+      var name = "John Smith";
+      /*for (var i = 0; i < name.Length; i++)
       {
-        if (i % 2 == 0)
-        {
-          System.Console.WriteLine(i);
-        }
-      }
-      for (var i = 10; i >= 1; i--)
+        System.Console.WriteLine(name[i]);
+      }*/
+      
+      //here we don't have to set a variable and compare it to something.Length and we also don't have to increment.
+      //so whenever we have a enumerable object, it's much easier to iterate over using a foreach.
+      /*foreach (var character in name)
       {
-        if (i % 2 ==0)
-        {
-          System.Console.WriteLine(i);
-        }
+        System.Console.WriteLine(character);
+      }*/
+
+      //intializing a new array with object initialization syntax
+      //we have to instantiate arrays with the new operators
+      var numbers = new int[] {1, 2, 3, 4};
+
+      foreach (var number in numbers)
+      {
+        System.Console.WriteLine(number);
       }
     }
   }
