@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ConsoleApplication
 {
@@ -14,7 +15,7 @@ namespace ConsoleApplication
       }
 
       //Write a program that continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
-      /*while (true)
+      while (true)
       {
         System.Console.Write("\nGive me a number:");
         var input = Convert.ToInt32(System.Console.ReadLine());
@@ -23,7 +24,7 @@ namespace ConsoleApplication
         if (input == null)
           System.Console.WriteLine(sum);
           break;
-      }*/
+      }
 
       //Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
       //System.Console.Write("\nGive me a number:");
@@ -39,19 +40,40 @@ namespace ConsoleApplication
       System.Console.WriteLine(numberInput+ "! = " +numberOutput);
 
       //program picks random number and if that number is correct display success message.
-      var random = new Random();
-      var number = random.Next(1, 10);
+      var number = new Random().Next(1, 10);
 
-      while(number != 4)
+      Console.WriteLine("Secret is " + number);
+      for (var i = 0; i < 4; i++)
       {
-        if (number == 4)
+        Console.Write("Guess the secret number: ");
+        var guess = Convert.ToInt32(Console.ReadLine());
+
+        if (guess == number)
         {
-          System.Console.WriteLine("You win");
-          break;
+            Console.WriteLine("You won!");
+            return;
         }
-        else
-          System.Console.WriteLine("You Lost");
       }
+
+      Console.WriteLine("You lost!");
+        
+      //user enters series of numbers and you find the largest. EX: 1, 7, 3, 4: 7 is highest.
+      Console.Write("Enter commoa separated numbers: ");
+      var input = Console.ReadLine();
+
+      var numbers = input.Split(',');
+
+      // Assume the first number is the max 
+      var max = Convert.ToInt32(numbers[0]);
+
+      foreach (var str in numbers)
+      {
+          var number = Convert.ToInt32(str);
+          if (number > max)
+              max = number;
+      }
+
+      Console.WriteLine("Max is " + max);
     }
   }
 }
