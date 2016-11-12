@@ -17,7 +17,7 @@ namespace ConsoleApplication
       //Write a program that continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
       while (true)
       {
-        System.Console.Write("\nGive me a number:");
+        System.Console.Write("\nGive me a number: ");
         var input = Convert.ToInt32(System.Console.ReadLine());
         var sum = input + input;
 
@@ -32,7 +32,7 @@ namespace ConsoleApplication
       var numberInput = Convert.ToInt32(int.Parse(theNumber));
       var numberOutput = numberInput;
       
-      //need the minus 1 so theNumber won't times itself by itself first, but instead start multiplying at theNumber subtracted by one. In this case, 5 - 1 = 4, so it will start multiplying 5 * 4 * 3 * etc..
+      //need the minus 1 so theNumber won't times itself by itself first, but instead start multiplying at theNumber subtracted by one. In this case, 5 - 1 = 4, so it will start multiplying theNumber * 4 * 3 * etc..
       for (var i = numberInput - 1; i >= 1; i--)
       {
        numberOutput = numberOutput * i;
@@ -50,15 +50,15 @@ namespace ConsoleApplication
 
         if (guess == number)
         {
-            Console.WriteLine("You won!");
-            return;
+          Console.WriteLine("You won!");
+          return;
         }
       }
 
       Console.WriteLine("You lost!");
         
       //user enters series of numbers and you find the largest. EX: 1, 7, 3, 4: 7 is highest.
-      Console.Write("Enter commoa separated numbers: ");
+      Console.Write("Enter a few of your favorite numbers: ");
       var input = Console.ReadLine();
 
       var numbers = input.Split(',');
