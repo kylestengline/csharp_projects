@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace ConsoleApplication
+namespace ArrayListExercise
 {
-    public class Program
+  public class Program
+  {
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
     }
+  }
 }
