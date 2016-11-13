@@ -17,11 +17,12 @@
 - [While Loops](https://github.com/kylestengline/csharp_projects/tree/while_loop)
 - [Random Class](https://github.com/kylestengline/csharp_projects/tree/random_class)
 
-### Exercises
-- [Conditional Exercises](https://github.com/kylestengline/csharp_projects/tree/conditional_exercise)
-- [Loop Exercises](https://github.com/kylestengline/csharp_projects/tree/loop_exercises)
-
 ### Arrays and Lists
 - [Multi Dimensional Arrays](https://github.com/kylestengline/csharp_projects/tree/multi-dimensional-arrays)
 - [Lists](https://github.com/kylestengline/csharp_projects/tree/lists)
+
+### Exercises
+- [Conditionals](https://github.com/kylestengline/csharp_projects/tree/conditional_exercise)
+- [Loops](https://github.com/kylestengline/csharp_projects/tree/loop_exercises)
+- [Arrays and Lists](https://github.com/kylestengline/csharp_projects/tree/array-list-exercise)
 
