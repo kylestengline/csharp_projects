@@ -20,3 +20,8 @@
 ### Exercises
 - [Conditional Exercises](https://github.com/kylestengline/csharp_projects/tree/conditional_exercise)
 - [Loop Exercises](https://github.com/kylestengline/csharp_projects/tree/loop_exercises)
+
+### Arrays and Lists
+- [Multi Dimensional Arrays](https://github.com/kylestengline/csharp_projects/tree/multi-dimensional-arrays)
+- [Lists](https://github.com/kylestengline/csharp_projects/tree/lists)
+
